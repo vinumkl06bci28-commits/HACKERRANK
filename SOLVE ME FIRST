@@ -1,0 +1,6 @@
+def add(val1,val2):     #defining a function with val1 & 2 as parameters
+    return val1 + val2  #returning_the_value
+a = int(input())           #giving_input_for_a 
+b = int(input())           #giving_input_for_b
+result = add(a,b)       #assignment_operator 
+print(result)          
