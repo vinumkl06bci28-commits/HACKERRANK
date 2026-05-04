@@ -1,0 +1,10 @@
+def minion_game(string):
+    # your code goes here
+    vowels = 'AEIOU'
+    
+    kevin = sum([len(string) - i for i in range(len(string)) if string[i] in vowels])
+    stuart = sum([len(string) - i for i in range(len(string)) if string[i] not in vowels])
+    
+    print('Draw' if kevin == stuart
+        else f'Kevin {kevin}' if kevin > stuart
+        else f'Stuart {stuart}')
