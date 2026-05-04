@@ -1,0 +1,10 @@
+if __name__ == '__main__':
+    N, M = input().split()
+    N, M = int(N), int(M)
+    for x in range(N - 1):
+        if x % 2 == 0:
+            print((".|." * (x + 1)).center(M, '-'))
+    print("WELCOME".center(M, '-'))
+    for x in reversed(range(N - 1)):
+        if x % 2 == 0:
+            print((".|." * (x + 1)).center(M, '-'))
