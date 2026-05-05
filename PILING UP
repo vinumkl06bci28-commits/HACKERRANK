@@ -1,0 +1,18 @@
+for t in range(int(input())):
+    stack = []
+    blockCount = int(input())
+    blockSizes = list(map(lambda x: int(x), input().split(' ')))
+    for block in range(blockCount):
+        if blockSizes[0] >= blockSizes[-1]:
+            stack.append(blockSizes.pop(0))
+        else:
+            stack.append(blockSizes.pop(-1))
+        
+        try:
+            if stack[-1] > stack[-2]:
+                print("No")
+                break
+            elif len(blockSizes) == 0:
+                print("Yes")
+        except IndexError:
+            pass
