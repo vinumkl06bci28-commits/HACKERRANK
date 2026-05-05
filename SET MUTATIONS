@@ -1,0 +1,10 @@
+if __name__ == '__main__':
+    mn = int(input())
+    main_set = set(map(int,input().split(" ")))
+    opn = int(input())
+    for i in range(opn):
+        op = input().split(" ")
+        sop = set(map(int,input().split(" ")))
+        eval("main_set."+op[0]+"(sop)")
+        
+    print(sum(main_set))
