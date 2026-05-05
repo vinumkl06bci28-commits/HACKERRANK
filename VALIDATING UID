@@ -1,0 +1,35 @@
+def checker(uid: str):
+    if len(uid) !=10:
+        return False
+    upper =0
+    digits = 0
+    seen=set()
+    
+    for ch in uid:
+        if not ch.isalnum():
+            return False
+            
+        if ch.isupper():
+            upper+=1
+            
+        if ch.isdigit():
+            digits+=1
+        if ch in seen:
+            return False
+        seen.add(ch)
+     
+    return upper>=2 and digits>= 3
+    
+    
+def main():
+    n =int(input())
+    for _ in range(n):
+        uid=input()
+        
+        if checker(uid):
+            print("Valid")
+        else:
+            print("Invalid")
+
+if __name__=="__main__":
+    main()
