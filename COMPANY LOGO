@@ -1,0 +1,6 @@
+from collections import Counter
+s = input()
+duplicatesDict = Counter(s)
+result = sorted(duplicatesDict.items(), key=lambda item: (-item[1], item[0]))
+for x in result[:3]:
+    print(*x)
